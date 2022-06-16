@@ -1,0 +1,35 @@
+<div class="container">  
+    <form action=" ">
+        <div class="mb-3">
+            <label htmlFor="nombre" class="form-label">nombre</label>
+            <input [(ngModel)]="tareaActual.nombre" name="nombre" type="text" id="nombre" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label htmlFor="capital" class="form-label">capital</label>
+            <input [(ngModel)]="tareaActual.capital" name="capital" type="text" id="capital" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label htmlFor="poblacion" class="form-label">poblacion</label>
+            <input [(ngModel)]="tareaActual.poblacion" name="poblacion" type="number" id="poblacion" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label htmlFor="superficie" class="form-label">superficie</label>
+            <input [(ngModel)]="tareaActual.superficie" name="superficie" type="number" id="superficie" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label htmlFor="nroDepartamentos" class="form-label">nroDepartamentos</label>
+            <input [(ngModel)]="tareaActual.nroDepartamentos" name="nroDepartamentos" type="number" id="nroDepartamentos" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label htmlFor="abreviatura" class="form-label">abreviatura</label>
+            <input [(ngModel)]="tareaActual.abreviatura" name="abreviatura" type="text" id="abreviatura" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label htmlFor="bandera" class="form-label">bandera</label>
+            <input [(ngModel)]="tareaActual.bandera" name="bandera" type="text" id="bandera" class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="editarDatos()">Guardar</button>
+        <button class="btn btn-success" [routerLink]="['/inicio']">Volver</button>
+      
+    </form>     
+</div>   

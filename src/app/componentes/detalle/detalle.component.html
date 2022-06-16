@@ -1,0 +1,21 @@
+<div>
+    <div class='row mt-5'>
+        <h1>Bandera:</h1>
+        <div class='col-4'>
+            <img class="card-img" [src]="'/assets/img/' + tareaActual.bandera" alt="Card image cap">
+        </div>
+
+        <div class='col-8'>
+            <ul class="list-group list-group-flush">
+                <li class='list-group-item'><b>Provincia:</b> {{tareaActual.nombre}}</li>
+                <li class='list-group-item'><b>Abreviatura:</b> {{tareaActual.abreviatura}}</li>
+                <li class='list-group-item'><b>Capital:</b> {{tareaActual.capital}}</li>
+                <li class='list-group-item'><b>Poblacion:</b> {{tareaActual.poblacion}}</li>
+                <li class='list-group-item'><b>Superficie:</b> {{tareaActual.superficie}}</li>
+                <li class='list-group-item'><b>Nº Departamentos:</b> {{tareaActual.nroDepartamentos}}</li>
+            </ul>     
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-success" [routerLink]="['/inicio']">Volver</button>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    <button class="btn btn-primary" [routerLink]="['/agregar']">Agregar</button>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">nombre</th>
+                <th scope="col">abreviatura</th>
+                <th scope="col">bandera</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let info of lista">
+                <td>{{info.nombre}}</td>
+                <td>{{info.abreviatura}}</td>
+                <img class="card-img" [src]="'/assets/img/' + info.bandera" alt="Card image cap">
+                <td>
+                    <div class="mb-3">
+                        <button class="btn btn-danger" (click)="eliminar(info.id)">Delete</button>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-dark" [routerLink]="['/editar/',info.id]">Update</button>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-success" [routerLink]="['/detalle/',info.id]">Ver detalle</button>
+                    </div>
+                </td>
+            </tr>               
+        </tbody>
+        </table>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">nombre</th>
+                <th scope="col">abreviatura</th>
+                <th scope="col">bandera</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let info of lista">
+                <td>{{info.nombre}}</td>
+                <td>{{info.abreviatura}}</td>
+                <img class="card-img" [src]="'/assets/img/' + info.bandera" alt="Card image cap">
+            </tr>               
+        </tbody>
+        </table>
+        <button class="btn btn-success" [routerLink]="['/inicio']">Volver</button>
+</div>
